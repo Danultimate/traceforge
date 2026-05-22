@@ -18,7 +18,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install TraceForge
-        run: pip install "agentrace-llm[anthropic]"
+        run: pip install "traceforge-llm[anthropic]"
 
       - name: Run agent + capture trace
         env:

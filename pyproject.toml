@@ -3,12 +3,12 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "agentrace-llm"
-version = "0.1.0"
+name = "traceforge-llm"
+version = "0.2.0"
 description = "Agent runtime tracing and deterministic replay for LLM applications"
 readme = "README.md"
-license = { text = "Apache-2.0" }
-authors = [{ name = "Daniel Blanco" }]
+license = { file = "LICENSE" }
+authors = [{ name = "Daniel Blanco", email = "hello@danblanco.dev" }]
 requires-python = ">=3.10"
 keywords = [
     "llm",
@@ -67,9 +67,11 @@ traceforge = "traceforge.cli:cli"
 traceforge = "traceforge.pytest_plugin"
 
 [project.urls]
-Homepage = "https://github.com/Danultimate/agentrace-llm"
-Repository = "https://github.com/Danultimate/agentrace-llm"
-Documentation = "https://github.com/Danultimate/agentrace-llm#readme"
+Homepage = "https://github.com/Danultimate/traceforge"
+Repository = "https://github.com/Danultimate/traceforge"
+Documentation = "https://github.com/Danultimate/traceforge#readme"
+Issues = "https://github.com/Danultimate/traceforge/issues"
+Changelog = "https://github.com/Danultimate/traceforge/releases"
 
 [tool.setuptools.packages.find]
 where = ["src"]

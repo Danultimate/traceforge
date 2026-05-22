@@ -2,10 +2,10 @@
 
 **Agent runtime tracing + LLM-mock replay for Python. Pip install. Async-first. Self-contained reports.**
 
-[![PyPI version](https://img.shields.io/pypi/v/agentrace-llm?label=pypi&color=blue)](https://pypi.org/project/agentrace-llm/)
-[![Python versions](https://img.shields.io/pypi/pyversions/agentrace-llm?label=python)](https://pypi.org/project/agentrace-llm/)
+[![PyPI version](https://img.shields.io/pypi/v/traceforge-llm?label=pypi&color=blue)](https://pypi.org/project/traceforge-llm/)
+[![Python versions](https://img.shields.io/pypi/pyversions/traceforge-llm?label=python)](https://pypi.org/project/traceforge-llm/)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
-[![CI](https://github.com/Danultimate/agentrace-llm/actions/workflows/ci.yml/badge.svg)](https://github.com/Danultimate/agentrace-llm/actions/workflows/ci.yml)
+[![CI](https://github.com/Danultimate/traceforge/actions/workflows/ci.yml/badge.svg)](https://github.com/Danultimate/traceforge/actions/workflows/ci.yml)
 [![Replay](https://img.shields.io/badge/replay-llm--mock%20%2B%20dry--run-success)](#replay)
 
 ![TraceForge HTML report](docs/report-screenshot.png)
@@ -15,7 +15,7 @@
 TraceForge records every LLM call, tool invocation, error, and state transition your agent makes into a typed span. The output is a replayable `run.jsonl` artifact plus a self-contained HTML report you can open in any browser — no server, no SaaS, no SDK lock-in. Replay mode re-executes the agent with cached LLM responses (or cached tool outputs) so you can verify the execution path without burning API calls.
 
 ```bash
-pip install "agentrace-llm[anthropic]"   # or [openai], [all]
+pip install "traceforge-llm[anthropic]"   # or [openai], [all]
 traceforge init && python agent.py
 ```
 
@@ -44,7 +44,7 @@ traceforge init && python agent.py
 **1. Install and scaffold.**
 
 ```bash
-pip install "agentrace-llm[anthropic]"
+pip install "traceforge-llm[anthropic]"
 traceforge init
 ```
 
@@ -208,7 +208,7 @@ Unknown models cost 0 and emit a one-shot warning so the trace still saves.
 
 ## Pytest plugin
 
-`pip install agentrace-llm` auto-registers a pytest plugin (via `pytest11` entry point). Three fixtures appear in any test suite:
+`pip install traceforge-llm` auto-registers a pytest plugin (via `pytest11` entry point). Three fixtures appear in any test suite:
 
 ```python
 import pytest
@@ -299,7 +299,7 @@ LangChain is intentionally manual — auto-patching is fragile across versions, 
 | LangGraph auto-instrumentation | manual only |
 | Cloud storage backends | non-goal |
 
-Track progress and propose features via [GitHub Issues](https://github.com/Danultimate/agentrace-llm/issues).
+Track progress and propose features via [GitHub Issues](https://github.com/Danultimate/traceforge/issues).
 
 ---
 

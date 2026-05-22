@@ -13,7 +13,7 @@ Provides three things:
    `pytest --tf-update-snapshots`.
 
 Registered automatically via the `pytest11` entry point in pyproject, so
-users just `pip install agentrace-llm` and the fixtures appear.
+users just `pip install traceforge-llm` and the fixtures appear.
 """
 from __future__ import annotations
 

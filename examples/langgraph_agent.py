@@ -5,7 +5,7 @@ LangGraph nodes are async functions — wrap each node body in a
 runner itself is not instrumented; you record each node's execution.
 
 Run:
-    pip install "agentrace-llm[langgraph]"
+    pip install "traceforge-llm[langgraph]"
     python examples/langgraph_agent.py
 """
 import asyncio

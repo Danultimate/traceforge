@@ -5,7 +5,7 @@ step from your callback handler. See `src/traceforge/integrations/langchain.py`
 for the bridge helper.
 
 Run:
-    pip install "agentrace-llm[langchain]"
+    pip install "traceforge-llm[langchain]"
     python examples/langchain_agent.py
 """
 import asyncio

@@ -5,7 +5,7 @@ import click
 
 
 @click.group()
-@click.version_option(package_name="agentrace-llm", prog_name="traceforge")
+@click.version_option(package_name="traceforge-llm", prog_name="traceforge")
 def cli():
     """TraceForge — agent runtime tracing and replay."""
 

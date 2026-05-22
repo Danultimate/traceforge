@@ -1,7 +1,7 @@
 """TraceForge quickstart — raw Anthropic client.
 
 Install:
-    pip install "agentrace-llm[anthropic]"
+    pip install "traceforge-llm[anthropic]"
     export ANTHROPIC_API_KEY=sk-ant-...
 Run:
     python examples/basic_agent.py
