@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentrace-llm"
+version = "0.1.0"
+description = "Agent runtime tracing and deterministic replay for LLM applications"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Daniel Blanco" }]
+requires-python = ">=3.10"
+keywords = [
+    "llm",
+    "agent",
+    "tracing",
+    "observability",
+    "replay",
+    "langchain",
+    "langgraph",
+    "anthropic",
+    "openai",
+    "debugging",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Debuggers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "rich>=13.0.0",
+    "python-ulid>=2.0.0",
+    "click>=8.0.0",
+    "pyyaml>=6.0",
+    "jinja2>=3.0.0",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.25.0"]
+openai = ["openai>=1.0.0"]
+langchain = ["langchain>=0.2.0"]
+langgraph = ["langgraph>=0.1.0"]
+all = [
+    "anthropic>=0.25.0",
+    "openai>=1.0.0",
+    "langchain>=0.2.0",
+    "langgraph>=0.1.0",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "ruff>=0.1",
+    "mypy>=1.0",
+]
+
+[project.scripts]
+traceforge = "traceforge.cli:cli"
+
+[project.entry-points.pytest11]
+traceforge = "traceforge.pytest_plugin"
+
+[project.urls]
+Homepage = "https://github.com/Danultimate/agentrace-llm"
+Repository = "https://github.com/Danultimate/agentrace-llm"
+Documentation = "https://github.com/Danultimate/agentrace-llm#readme"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

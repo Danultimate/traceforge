@@ -1,0 +1,33 @@
+name: Agent Trace Regression Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  traceforge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install TraceForge
+        run: pip install "agentrace-llm[anthropic]"
+
+      - name: Run agent + capture trace
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python agent.py
+
+      - name: Upload trace report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: traceforge-report
+          path: .traceforge/runs/

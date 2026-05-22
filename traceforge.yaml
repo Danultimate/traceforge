@@ -1,0 +1,3 @@
+auto_save: true
+store_dir: .traceforge/runs
+slim: false
