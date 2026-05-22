@@ -2,8 +2,8 @@
 
 **Agent runtime tracing + LLM-mock replay for Python. Pip install. Async-first. Self-contained reports.**
 
-[![PyPI version](https://img.shields.io/pypi/v/traceforge-llm?label=pypi&color=blue)](https://pypi.org/project/traceforge-llm/)
-[![Python versions](https://img.shields.io/pypi/pyversions/traceforge-llm?label=python)](https://pypi.org/project/traceforge-llm/)
+[![PyPI version](https://img.shields.io/pypi/v/traceforge-llm?label=pypi&color=blue&v=2)](https://pypi.org/project/traceforge-llm/)
+[![Python versions](https://img.shields.io/pypi/pyversions/traceforge-llm?label=python&v=2)](https://pypi.org/project/traceforge-llm/)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![CI](https://github.com/Danultimate/traceforge/actions/workflows/ci.yml/badge.svg)](https://github.com/Danultimate/traceforge/actions/workflows/ci.yml)
 [![Replay](https://img.shields.io/badge/replay-llm--mock%20%2B%20dry--run-success)](#replay)
